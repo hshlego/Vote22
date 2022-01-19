@@ -30,9 +30,7 @@ dependencies {
 	testImplementation('org.projectlombok:lombok')
 	annotationProcessor('org.projectlombok:lombok')
 	testAnnotationProcessor('org.projectlombok:lombok')
-	
-	//DB
-	
+ 
 }
 
 test {

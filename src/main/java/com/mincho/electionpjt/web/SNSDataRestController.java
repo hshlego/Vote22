@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mincho.electionpjt.domain.SNSData;
-import com.mincho.electionpjt.domain.SNSDataRepository;
 import com.mincho.electionpjt.domain.SNSDataSaveRequestDto;
+import com.mincho.electionpjt.repository.SNSDataRepository;
 
 import lombok.AllArgsConstructor;
 

@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mincho.electionpjt.domain.VideoData;
-import com.mincho.electionpjt.domain.VideoDataRepository;
 import com.mincho.electionpjt.domain.VideoDataSaveRequestDto;
+import com.mincho.electionpjt.repository.VideoDataRepository;
 
 import lombok.AllArgsConstructor;
 

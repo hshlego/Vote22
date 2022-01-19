@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mincho.electionpjt.domain.SurveyResult;
-import com.mincho.electionpjt.domain.SurveyResultRepository;
 import com.mincho.electionpjt.domain.SurveyResultSaveRequestDto;
+import com.mincho.electionpjt.repository.SurveyResultRepository;
 
 import lombok.AllArgsConstructor;
 
