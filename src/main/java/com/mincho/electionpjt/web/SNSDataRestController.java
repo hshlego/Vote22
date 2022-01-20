@@ -1,5 +1,7 @@
 package com.mincho.electionpjt.web;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -37,5 +39,15 @@ public class SNSDataRestController {
     @PostMapping("/post")
     public void postSNSData(@RequestBody SNSDataSaveRequestDto dto){
     	snsDataRepository.save(dto.toEntity());
+    }
+    
+    @GetMapping("/test")
+    public ArrayList<SNSData> getTesting() {
+    	return new ArrayList(Arrays.asList(
+    			new SNSData("1", "1", "1", "1"),
+    			new SNSData("1", "1", "1", "1"),
+    			new SNSData("1", "1", "1", "1"),
+    			new SNSData("1", "1", "1", "1")    			
+    			));
     }
 }

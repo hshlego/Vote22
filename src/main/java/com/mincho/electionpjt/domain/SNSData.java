@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -14,6 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
+@Table(name = "snsdata")
 public class SNSData {
 
 	@Id
@@ -25,13 +27,13 @@ public class SNSData {
 	@Column(columnDefinition = "Text")
 	private String content;
 	private String url;
-	private String time;
+	private String upload;
 	
 	@Builder
-    public SNSData(String media, String content, String url, String time) {
+    public SNSData(String media, String content, String url, String upload) {
 		this.media = media;
 		this.content = content;
 		this.url = url;
-		this.time = time;
+		this.upload = upload;
     }
 }

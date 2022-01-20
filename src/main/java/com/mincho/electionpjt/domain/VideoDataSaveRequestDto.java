@@ -12,7 +12,7 @@ public class VideoDataSaveRequestDto {
 
     private String name;
     private String url;
-    private String date;
+    private String upload;
     private String views;
     private String runtime;
 
@@ -20,7 +20,7 @@ public class VideoDataSaveRequestDto {
         return VideoData.builder()
         		.name(name)
         		.url(url)
-        		.date(date)
+        		.upload(upload)
         		.views(views)
         		.runtime(runtime)
         		.build();

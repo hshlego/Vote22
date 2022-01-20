@@ -12,8 +12,8 @@ public class SurveyResultSaveRequestDto {
 
     private String requester;
     private String executer;
-    private String month;
-    private String day;
+    private String uploadMonth;
+    private String uploadDay;
     private String url;
     private String c1;
     private String c2;
@@ -24,8 +24,8 @@ public class SurveyResultSaveRequestDto {
         return SurveyResult.builder()
         		.requester(requester)
         		.executer(executer)
-        		.month(month)
-        		.day(day)
+        		.uploadMonth(uploadMonth)
+        		.uploadDay(uploadDay)
         		.url(url)
         		.c1(c1)
         		.c2(c2)

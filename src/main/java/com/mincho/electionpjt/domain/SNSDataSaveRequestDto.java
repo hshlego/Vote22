@@ -13,14 +13,14 @@ public class SNSDataSaveRequestDto {
     private String media;
     private String content;
     private String url;
-    private String time;
+    private String upload;
 
     public SNSData toEntity(){
         return SNSData.builder()
         		.media(media)
         		.content(content)
         		.url(url)
-        		.time(time)
+        		.upload(upload)
         		.build();
     }
 }
