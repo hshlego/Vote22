@@ -21,18 +21,18 @@ public class VideoData {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 	
-	private String name;
-	private String url;
-	private String upload;
-	private String views;
-	private String runtime; 
+	private String title;
+	private String thumbnail;
+	private String runtime;
+	private String upload;//uploaded date
+	private String candidate;
 	
 	@Builder
-    public VideoData(String name, String url, String upload, String views, String runtime) {
-		this.name = name;
-		this.url = url;
-		this.upload = upload;
-		this.views = views;
+    public VideoData(String title, String thumbnail, String runtime, String upload, String candidate) {
+		this.title = title;
+		this.thumbnail = thumbnail;
 		this.runtime = runtime;
-    }
+		this.upload = upload;
+		this.candidate = candidate;
+	}
 }

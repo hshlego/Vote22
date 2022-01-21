@@ -1,10 +1,9 @@
 package com.mincho.electionpjt.web;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,19 +34,24 @@ public class SNSDataRestController {
         return snsDataRepository.findAll();
     }
     
-
+    @GetMapping("/all/{candidate}")
+    public List<SNSData> findByCandidate(@PathVariable("candidate") String candidate) {
+		return snsDataRepository.findByCandidate(candidate, Sort.by(Sort.Direction.DESC, "id"));
+    }
+    
+    @GetMapping("/limit30/{candidate}")
+    public List<SNSData> findTop30ByCandidate(@PathVariable("candidate") String candidate) {
+    	return snsDataRepository.findTop30ByCandidate(candidate, Sort.by(Sort.Direction.DESC, "id"));
+    }
+    
+    @GetMapping("/limit15/{candidate}")
+    public List<SNSData> findTop15ByCandidate(@PathVariable("candidate") String candidate) {
+    	return snsDataRepository.findTop30ByCandidate(candidate, Sort.by(Sort.Direction.DESC, "id"));
+    }
+    
     @PostMapping("/post")
     public void postSNSData(@RequestBody SNSDataSaveRequestDto dto){
     	snsDataRepository.save(dto.toEntity());
     }
     
-    @GetMapping("/test")
-    public ArrayList<SNSData> getTesting() {
-    	return new ArrayList(Arrays.asList(
-    			new SNSData("1", "1", "1", "1"),
-    			new SNSData("1", "1", "1", "1"),
-    			new SNSData("1", "1", "1", "1"),
-    			new SNSData("1", "1", "1", "1")    			
-    			));
-    }
 }

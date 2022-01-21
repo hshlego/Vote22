@@ -10,19 +10,19 @@ import lombok.Setter;
 @NoArgsConstructor
 public class VideoDataSaveRequestDto {
 
-    private String name;
-    private String url;
-    private String upload;
-    private String views;
-    private String runtime;
-
+	private String title;
+	private String thumbnail;
+	private String runtime;
+	private String upload;//uploaded date
+	private String candidate;
+	
     public VideoData toEntity(){
         return VideoData.builder()
-        		.name(name)
-        		.url(url)
-        		.upload(upload)
-        		.views(views)
+        		.title(title)
+        		.thumbnail(thumbnail)
         		.runtime(runtime)
+        		.upload(upload)
+        		.candidate(candidate)
         		.build();
     }
 }

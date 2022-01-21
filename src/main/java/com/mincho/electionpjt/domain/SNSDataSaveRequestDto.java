@@ -14,6 +14,7 @@ public class SNSDataSaveRequestDto {
     private String content;
     private String url;
     private String upload;
+    private String candidate;
 
     public SNSData toEntity(){
         return SNSData.builder()
@@ -21,6 +22,7 @@ public class SNSDataSaveRequestDto {
         		.content(content)
         		.url(url)
         		.upload(upload)
+        		.candidate(candidate)
         		.build();
     }
 }
