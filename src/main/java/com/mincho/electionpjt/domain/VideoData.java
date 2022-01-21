@@ -25,14 +25,16 @@ public class VideoData {
 	private String thumbnail;
 	private String runtime;
 	private String upload;//uploaded date
+	private String url;
 	private String candidate;
 	
 	@Builder
-    public VideoData(String title, String thumbnail, String runtime, String upload, String candidate) {
+    public VideoData(String title, String thumbnail, String runtime, String upload, String url, String candidate) {
 		this.title = title;
 		this.thumbnail = thumbnail;
 		this.runtime = runtime;
 		this.upload = upload;
+		this.url = url;
 		this.candidate = candidate;
 	}
 }

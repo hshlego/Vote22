@@ -15,6 +15,7 @@ public class VideoDataSaveRequestDto {
 	private String runtime;
 	private String upload;//uploaded date
 	private String candidate;
+	private String url;
 	
     public VideoData toEntity(){
         return VideoData.builder()
@@ -22,6 +23,7 @@ public class VideoDataSaveRequestDto {
         		.thumbnail(thumbnail)
         		.runtime(runtime)
         		.upload(upload)
+        		.url(url)
         		.candidate(candidate)
         		.build();
     }
