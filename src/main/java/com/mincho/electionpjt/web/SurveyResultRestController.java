@@ -36,12 +36,12 @@ public class SurveyResultRestController {
     
     @GetMapping("/limit10")
     public List<SurveyResult> getTop10() {
-        return surveyResultRepository.findTop10(Sort.by(Sort.Direction.DESC, "id"));
+        return surveyResultRepository.findTop10By(Sort.by(Sort.Direction.DESC, "id"));
     }
     
     @GetMapping("/limit15")
     public List<SurveyResult> getTop15() {
-        return surveyResultRepository.findTop15(Sort.by(Sort.Direction.DESC, "id"));
+        return surveyResultRepository.findTop15By(Sort.by(Sort.Direction.DESC, "id"));
     }
 
     @PostMapping("/post")
