@@ -35,6 +35,8 @@ public class RegisteredRestController {
     
     @PostMapping("/post")
     public void postRegistered(@RequestBody RegisteredSaveRequestDto dto) {
+    	if(registeredRepository.existsByRegid(dto.getRegid())) return;
     	registeredRepository.save(dto.toEntity());
     }
+    
 }
