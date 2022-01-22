@@ -53,4 +53,11 @@ public class VideoDataRestController {
     public void savePosts(@RequestBody VideoDataSaveRequestDto dto){
     	videoDataRepository.save(dto.toEntity());
     }
+    
+    @PostMapping("/postMany")
+    public void saveManyPosts(@RequestBody List<VideoDataSaveRequestDto> dtos){
+    	for(int i = 0; i < dtos.size(); i++) {
+    		videoDataRepository.save(dtos.get(i).toEntity());
+    	}
+    }
 }
